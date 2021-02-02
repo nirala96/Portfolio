@@ -53,15 +53,67 @@ x{
     backface-visibility: visible;
 }
 
+/* Ujarak */
+.button--ujarak {
+	-webkit-transition: border-color 0.4s, color 0.4s;
+	transition: border-color 0.4s, color 0.4s;
+}
+.button--ujarak::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #37474f;
+	z-index: -1;
+	opacity: 0;
+	-webkit-transform: scale3d(0.7, 1, 1);
+	transform: scale3d(0.7, 1, 1);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak.button--round-s::before {
+	border-radius: 2px;
+}
+.button--ujarak.button--inverted::before {
+	background: #7986CB;
+}
+.button--ujarak,
+.button--ujarak::before {
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+
+
+
+.button--ujarak:hover {
+	color: #fff;
+	border-color: #37474f;
+}
+.button--ujarak.button--inverted:hover {
+	color: #37474F;
+	border-color: #fff;
+}
+.button--ujarak:hover::before {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+
 h1, h4, h5, h6 {
   color: #EEE;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   margin: 0 0 30px 0; }
 
 h2{
     color: #EEE;
-  font-family: "Playfair Display", Georgia, serif;
+    font-family: "Montserrat", Georgia, serif;
   font-weight: 200;
   margin: 0 0 20px 0;
 }
@@ -513,6 +565,11 @@ margin-left: 10px;}
   text-transform: uppercase;
   letter-spacing: 5px;
   font-weight: 500; }
+
+  .about-desc h2 {
+    font-size: 38px;
+    font-weight: 400;
+  font-family: "Montserrat", Georgia, serif;}
 
 .about-desc h1 {
   font-size: 38px;
