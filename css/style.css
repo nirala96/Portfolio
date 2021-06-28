@@ -484,6 +484,7 @@ body.offcanvas {
 .colorlib-profiles,
 .colorlib-softwareprojects
 .colorlib-education,
+.colorlib-achievements,
 .colorlib-blog,
 .colorlib-work,
 .colorlib-about,
@@ -501,7 +502,8 @@ body.offcanvas {
     .colorlib-skills,
     .colorlib-profiles
     .colorlib-education,
-    .colorlib-softwareprojects
+    .colorlib-achievements,
+    .colorlib-softwareprojects,
     .colorlib-blog,
     .colorlib-work,
     .colorlib-about,
